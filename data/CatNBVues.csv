@@ -1,6 +1,16 @@
-"Film & Animation" "Autos & Vehicles" "Music" "Pets & Animals" "Sports" "Travel & Events" "Gaming" "People & Blogs" "Comedy" "Entertainment" "News & Politics" "Howto & Style" "Education" "Science & Technology" "Nonprofits & Activism"
-" - 500 Millions" 0 0 0 0.25 0 0.25 0 0 0 0 0 0 0 0 0.25
-" Entre 500 M & 1 G" 0 0.85 0 0 0 0 0 0 0 0 0 0 0 0.85 0
-" Entre 1 G & 2.5 G" 0 0 0 0 0 0 0 1.6 0 0 0 1.6 1.6 0 0
-" Entre 2.5 & 5 G" 2.1 0 2.1 0 2.4 0 0 0 2.1 0 2.1 0 0 0 0
-" + 5 G" 0 0 0 0 0 0 3 0 0 3 0 0 0 0 0
+" - 500 Millions" " Entre 500 Millions & 1 Milliard" " Entre 1 Milliard & 2.5 Milliards" " Entre 2.5 Milliards & 5 Milliards" " + 5 Milliards"
+"Film & Animation" 0 0 0 2.1 0
+"Autos & Vehicles" 0 0.85 0 0 0
+"Music" 0 0 0 2.1 0
+"Pets & Animals" 0.25 0 0 0 0
+"Sports" 0 0 0 2.1 0
+"Travel & Events" 0.25 0 0 0 0
+"Gaming" 0 0 0 0 3
+"People & Blogs" 0 0 1.6 0 0
+"Comedy" 0 0 0 2.1 0
+"Entertainment" 0 0 0 0 3
+"News & Politics" 0 0 0 2.1 0
+"Howto & Style" 0 0 1.6 0 0
+"Education" 0 0 1.6 0 0
+"Science & Technology" 0 0.85 0 0 0
+"Nonprofits & Activism" 0.25 0 0 0 0

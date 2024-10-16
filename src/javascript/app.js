@@ -587,6 +587,8 @@ function init() {
     controls.addEventListener('lock', function () {
         document.getElementById('instructions').style.display = 'none';
         controls.lock();
+        video.play();
+        videoEchelle.play();
     });
 
     controls.addEventListener('unlock', function () {

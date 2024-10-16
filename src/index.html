@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corsica Dataviz 2024</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="margin: 0 !important;overflow: hidden;">
+    <video id="videoTextureMp4O3" loop playsinline style="display:none">
+        <source src="assets/MP4O3.mp4" type="video/mp4">
+    </video>
+    <video id="videoTextureEchelleO3" loop playsinline style="display:none">
+        <source src="assets/echelle.mp4" type="video/mp4">
+    </video>
+    <div id="instructions">
+        <h1>Clique pour entrer</h1>
+        <p>Cliquez n'importe où sur la page pour activer la scène 3D</p>
+        <img id="toucheE" src="./assets/toucheI.png">
+    </div>
+
+    <div id="image-container">
+        <img id="imagezq" src="./assets/zqsd.png" alt="Image déplacement">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/PointerLockControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="javascript/app.js"></script>
+</body>
+
+</html>

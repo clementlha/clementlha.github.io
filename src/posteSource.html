@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carte interractive de la Corse</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style>
+        body { padding: 0; margin: 0; } #map { height: 100vh; width: 100vw; } #controls { position: absolute; top: 10px; left: 82vw; background-color: white; padding: 10px; z-index: 1000; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); } .inline { display: inline-block; vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <input type="checkbox" id="toggleMarkers" checked>
+        <img style="height: 22px;width: 22px" src="./assets/posteS.png"></img>
+        <label for="toggleMarkers">Postes sources</label><br>
+        <input type="checkbox" id="HTASoute" checked>
+        <div class="inline" style="height: 15px;width: 15px; background-color: green; border-radius: 25px"></div>
+        <label for="HTASoute">Lignes haute tension souteraine</label><br>
+        <input type="checkbox" id="HTAAerien" checked>
+        <div class="inline" style="height: 15px;width: 15px; background-color: orange; border-radius: 25px"></div>
+        <label for="HTAAerien">Lignes Haute tension aérienne</label>
+    </div>
+    <div id="map"></div>
+    <script>
+        var map=L.map("map",{minZoom:8,maxZoom:18}).setView([42.3063889,9.1513888],9);L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);var markersPS=[],HTAS=[],HTAA=[];function toggleMarkers(){var e=document.getElementById("toggleMarkers");markersPS.forEach(function(t){e.checked?t.addTo(map):map.removeLayer(t)})}function toggleHTASoute(){var e=document.getElementById("HTASoute");HTAS.forEach(function(t){e.checked?t.addTo(map):map.removeLayer(t)})}function toggleHTAAerien(){var e=document.getElementById("HTAAerien");HTAA.forEach(function(t){e.checked?t.addTo(map):map.removeLayer(t)})}fetch("./assets/postes-sources.json").then(e=>e.json()).then(e=>{e.forEach(function(e){if(e.latitude&&e.longitude){var t=L.icon({iconUrl:"./assets/posteS.png",iconSize:[35,35],iconAnchor:[16,0],popupAnchor:[-0,-0]}),o=L.marker([e.latitude,e.longitude],{icon:t}).addTo(map);o.bindPopup("<b>"+e.statut+"</b><br>"),markersPS.push(o)}})}).catch(e=>console.error("Erreur lors du chargement du fichier JSON:",e)),fetch("./assets/htaS.json").then(e=>e.json()).then(e=>{e.forEach(e=>{var t=e.coordinates.map(e=>[e[1],e[0]]),o=L.polyline(t,{color:"green",weight:4,opacity:.7,smoothFactor:1}).addTo(map);HTAS.push(o)});var t=e.flatMap(e=>e.coordinates.map(e=>[e[1],e[0]]));map.fitBounds(t)}).catch(e=>console.error("Erreur lors du chargement du fichier JSON:",e)),fetch("./assets/htaA.json").then(e=>e.json()).then(e=>{e.forEach(e=>{var t=e.coordinates.map(e=>[e[1],e[0]]),o=L.polyline(t,{color:"orange",weight:4,opacity:.7,smoothFactor:1}).addTo(map);HTAA.push(o)});var t=e.flatMap(e=>e.coordinates.map(e=>[e[1],e[0]]));map.fitBounds(t)}).catch(e=>console.error("Erreur lors du chargement du fichier JSON:",e)),document.getElementById("toggleMarkers").addEventListener("change",toggleMarkers),document.getElementById("HTASoute").addEventListener("change",toggleHTASoute),document.getElementById("HTAAerien").addEventListener("change",toggleHTAAerien);
+    </script>
+</body>
+
+</html>

@@ -9,15 +9,6 @@
     <script src="https://x3dom.org/release/x3dom.js"></script>
     <link rel="stylesheet" href="https://x3dom.org/release/x3dom.css" />
     <script src="https://raw.githack.com/jamesleesaunders/d3-x3d/master/dist/d3-x3d.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js",
-                "GLTFExporter": "https://cdn.jsdelivr.net/npm/three@0.150.1/examples/jsm/exporters/GLTFExporter.js"
-            }
-        }
-    </script>
     <style>
         body {
             display: flex;
@@ -29,7 +20,7 @@
 <body>
     <div id="chartholder"></div>
     <script type="module">
-        import*as e from"three";import{GLTFExporter as a}from"three/addons/exporters/GLTFExporter.js";var chartHolder=d3.select("#chartholder"),myData=[{key:"2018",values:[{key:"Moteurs diesel",value:811677},{key:"Hydraulique",value:640733},{key:"Liaisons",value:615394},{key:"Solaire photovolta\xefque",value:184374},{key:"Turbines \xe0 combustion",value:7222}]},{key:"2019",values:[{key:"Moteurs diesel",value:936712},{key:"Hydraulique",value:402954},{key:"Liaisons",value:713643},{key:"Solaire photovolta\xefque",value:220199},{key:"Turbines \xe0 combustion",value:31051}]},{key:"2020",values:[{key:"Moteurs diesel",value:770001},{key:"Hydraulique",value:499853},{key:"Liaisons",value:659247},{key:"Solaire photovolta\xefque",value:237602},{key:"Turbines \xe0 combustion",value:26283}]},{key:"2021",values:[{key:"Moteurs diesel",value:902622},{key:"Hydraulique",value:536603},{key:"Liaisons",value:630146},{key:"Solaire photovolta\xefque",value:256117},{key:"Turbines \xe0 combustion",value:28599}]},{key:"2022",values:[{key:"Moteurs diesel",value:1099058},{key:"Hydraulique",value:336624},{key:"Liaisons",value:608862},{key:"Solaire photovolta\xefque",value:276470},{key:"Turbines \xe0 combustion",value:16974}]},{key:"2023",values:[{key:"Moteurs diesel",value:768803},{key:"Hydraulique",value:566992},{key:"Liaisons",value:608598},{key:"Solaire photovolta\xefque",value:282004},{key:"Turbines \xe0 combustion",value:14553}]}],myChart=d3.x3d.chart.barChartMultiSeries();chartHolder.datum(myData).call(myChart);var x3dElement=document.querySelector("x3d");x3dElement.setAttribute("width","96vw"),x3dElement.setAttribute("height","96vh");
+        var chartHolder=d3.select("#chartholder"),myData=[{key:"2018",values:[{key:"Moteurs diesel",value:811677},{key:"Hydraulique",value:640733},{key:"Liaisons",value:615394},{key:"Solaire photovolta\xefque",value:184374},{key:"Turbines \xe0 combustion",value:7222}]},{key:"2019",values:[{key:"Moteurs diesel",value:936712},{key:"Hydraulique",value:402954},{key:"Liaisons",value:713643},{key:"Solaire photovolta\xefque",value:220199},{key:"Turbines \xe0 combustion",value:31051}]},{key:"2020",values:[{key:"Moteurs diesel",value:770001},{key:"Hydraulique",value:499853},{key:"Liaisons",value:659247},{key:"Solaire photovolta\xefque",value:237602},{key:"Turbines \xe0 combustion",value:26283}]},{key:"2021",values:[{key:"Moteurs diesel",value:902622},{key:"Hydraulique",value:536603},{key:"Liaisons",value:630146},{key:"Solaire photovolta\xefque",value:256117},{key:"Turbines \xe0 combustion",value:28599}]},{key:"2022",values:[{key:"Moteurs diesel",value:1099058},{key:"Hydraulique",value:336624},{key:"Liaisons",value:608862},{key:"Solaire photovolta\xefque",value:276470},{key:"Turbines \xe0 combustion",value:16974}]},{key:"2023",values:[{key:"Moteurs diesel",value:768803},{key:"Hydraulique",value:566992},{key:"Liaisons",value:608598},{key:"Solaire photovolta\xefque",value:282004},{key:"Turbines \xe0 combustion",value:14553}]}],myChart=d3.x3d.chart.barChartMultiSeries();chartHolder.datum(myData).call(myChart);var x3dElement=document.querySelector("x3d");x3dElement.setAttribute("width","96vw"),x3dElement.setAttribute("height","96vh");
     </script>
 </body>
 </html>

@@ -1,30 +1,28 @@
-#### INFO
-Dependances :
-- Vite pour servir le projet
-npm i vite -D
-- ThreeJS
-npm i three 
 
+# Challenge Data Viz 2024
 
+## Auteur
 
-Commande de demarrage :
-npm run dev
+- Clément L'HARIDON
 
-OU pour un serveur Http:
-npx http-server
-    ++cache 1h
+## Demo
 
+Une fois dans la simulation les touches pour se déplacer sont les flèches du clavier ou Z pour avancer, Q pour tourner à gauche, D pour tourner à droite et S pour reculer et les mouvements de la souris pour déplacer la camera dans l'espace.
+La touche échap permet de sortir de la simulation 3D.
 
-Une fois le modèle gltf creer dans RStudio avec le .bin associé, on doit convertir le gltf en glb : 
-npx gltf-pipeline -i scene.gltf -o scene.glb
+[Démo principale ici](https://clementlha.github.io)
 
+#### Liens annexes : 
 
-Nom
-Corsica Horizons : Le Voyage des Éléments
-Bienvenue dans un parcours exploratoire en 3D à travers les éléments naturels, l'énergie et les risques en Corse.
+ - [Carte interactive des lignes électriques en Corse](https://clementlha.github.io/src/posteSource.html)
+ - [Histogramme de la production d'électricité par filière en Corse](https://clementlha.github.io/src/i4.html)
 
-INFO :  creer un gif https://ezgif.com/maker => convertir gif en video
-Ozone
-L'ozone (O₃) est un composé gazeux secondaire formé à partir de dioxyde d'azote et de composés organiques volatils.
+Utilisation des librairies :
+ 
+ - *Threejs* pour créer et afficher des graphiques 3D dans un navigateur web en utilisant WebGL.
+ - *Blender* pour modeliser des graphiques 3D.
+ - *D3js* pour creer des graphiques 3D.
+ - *Leaflet* qui permet de réaliser des cartes interactives
 
-TITRE GIFO3 : Carte de prévision du maximum journalier de la pollution à l'ozone(O3) en µg/m³ pour la période 03/09/2024 au 11/09/2024.
+ Utilisation du logiciel *RStudio* avec les dépendances ggplot2 et rayshader. 
+
